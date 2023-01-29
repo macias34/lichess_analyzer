@@ -14,7 +14,7 @@ export const getPeakRating = (data) => {
   const gameFormatData = data.find(
     (format) => format.name.toLowerCase() === gameFormat.toLowerCase()
   );
-
+  if (!gameFormatData) return data;
   if (gameFormatData.points.length === 0) return data;
 
   const bulletPoints = gameFormatData.points.map(
@@ -30,6 +30,7 @@ export const getPeakRating = (data) => {
 };
 
 export const reducePointsArr = (data) => {
+  if (!data) return data;
   if (data.points.length === 0) return data.points;
 
   const bulletPoints = data.points.map(

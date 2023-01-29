@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { iconedPerfs } from "../../../constants/cardConstants";
 import { changeGameFormat } from "../../../features/gameFormat";
 import Rating from "./Rating/Rating";
+import ErrorUser from "../../ErrorUser/ErrorUser";
 
 const UserRatings = ({ perfs }) => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const UserRatings = ({ perfs }) => {
     perf.icon = foundPerf.icon;
   });
 
+  if (perfsArr.length === 0) return <ErrorUser error={{ status: 404 }} />;
   useEffect(() => {
     dispatch(changeGameFormat({ gameFormat: perfsArr[0][0] }));
     // Sets gameFormat to first available

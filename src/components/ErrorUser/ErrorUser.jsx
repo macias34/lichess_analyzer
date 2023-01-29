@@ -11,7 +11,7 @@ const ErrorUser = ({ error }) => {
   };
 
   return (
-    <div className="w-screen flex flex-col items-center">
+    <div className="h-screen w-screen flex flex-col items-center justify-center bg-black absolute top-0 left-0">
       <h1 className="text-3xl text-red-500 m-20">{message()}</h1>
       <Search />
     </div>
