@@ -7,7 +7,9 @@ export const filterPerfs = (perfsObj) => {
       bullet: perfsObj.bullet,
       blitz: perfsObj.blitz,
       rapid: perfsObj.rapid,
-    }).filter(([_, v]) => v != null)
+    })
+      .filter(([_, v]) => v != null)
+      .filter((perf) => perf[1].games !== 0)
   );
 
   return filteredPerfsObj;

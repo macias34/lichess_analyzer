@@ -1,10 +1,18 @@
 import Search from "../Search/Search";
 
-const ErrorUser = ({ message }) => {
+const ErrorUser = ({ error }) => {
+  const message = () => {
+    switch (error.status) {
+      case 404:
+        return "User not found.";
+      default:
+        return error.data.error;
+    }
+  };
+
   return (
-    <div className="w-full flex flex-col items-center gap-7">
-      <h1 className="text-3xl text-red-500">{message}</h1>
-      <span className="text-2xl text-emerald-400">Try another account !</span>
+    <div className="w-screen flex flex-col items-center">
+      <h1 className="text-3xl text-red-500 m-20">{message()}</h1>
       <Search />
     </div>
   );

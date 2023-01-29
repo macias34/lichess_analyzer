@@ -1,7 +1,10 @@
 import Input from "../Input/Input";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
-const Search = () => {
+const Search = ({ style }) => {
+  const dispatch = useDispatch();
+
   const navigate = useNavigate();
 
   const submit = (event, inputElement) => {
@@ -11,11 +14,12 @@ const Search = () => {
 
     if (event.key === "Enter") {
       navigate(`/${inputValue}`);
+      inputElement.current.value = "";
     }
   };
 
   return (
-    <div className="w-3/5 flex justify-around items-center">
+    <div className="w-screen flex justify-around items-center" style={style}>
       <Input placeholder="Enter lichess.org username" submit={submit} />
     </div>
   );
