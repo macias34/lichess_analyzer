@@ -11,37 +11,6 @@ const UserDetails = ({ profile, title, username }) => {
 
   const profileUrl = PROFILE_URL + username;
 
-  const renderRatings = () => {
-    if (uscf && fide) {
-      return (
-        <div className="flex flex-col mt-3">
-          <p className="text-lg">
-            <span className="text-red-500 font-bold">USCF</span> :{" "}
-            <span className="font-semibold">{uscf}</span>
-          </p>
-          <p className="text-lg">
-            <span className="text-blue-400 font-bold">FIDE</span> :{" "}
-            <span className="font-semibold">{fide}</span>
-          </p>
-        </div>
-      );
-    } else if (uscf) {
-      return (
-        <p className="text-lg">
-          <span className="text-red-500 font-bold">USCF</span> Rating :{" "}
-          <span className="font-semibold">{uscf}</span>
-        </p>
-      );
-    } else if (fide) {
-      return (
-        <p className="text-lg">
-          <span className="text-blue-400 font-bold">FIDE</span> Rating :{" "}
-          <span className="font-semibold">{fide}</span>
-        </p>
-      );
-    }
-  };
-
   const renderName = () => {
     if (firstName && lastName) {
       return (

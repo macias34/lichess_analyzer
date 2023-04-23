@@ -14,8 +14,8 @@ const Performance = ({ data }) => {
   if (games)
     return (
       <div className={` ${slate.card}`}>
-        <span className="font-semibold text-xl">Games</span>
-        <span className="text-3xl  text-emerald-400 font-bold">
+        <span className="font-semibold sm:text-xl text-base">Games</span>
+        <span className="sm:text-3xl text-xl  text-emerald-400 font-bold">
           {winrate}% WR
         </span>
         <p>

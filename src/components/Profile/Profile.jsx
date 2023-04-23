@@ -23,9 +23,9 @@ const Profile = () => {
   if (data?.disabled) return <DisabledUser />;
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-evenly">
+    <div className="flex flex-col gap-5 sm:gap-0 items-center sm:justify-evenly">
       {!isFetching ? (
-        <div className="w-full h-fit flex items-center justify-around">
+        <div className="w-full order-1 gap-5 sm:gap-0 sm:h-fit h-[80vh] flex sm:flex-row flex-col items-center sm:justify-around">
           <ProfileCard data={data} />
           <ProfileStats username={username} />
         </div>

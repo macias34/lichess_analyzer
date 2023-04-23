@@ -20,7 +20,6 @@ const UserRatings = ({ perfs }) => {
   if (perfsArr.length === 0) return <ErrorUser error={{ status: 404 }} />;
   useEffect(() => {
     dispatch(changeGameFormat({ gameFormat: perfsArr[0][0] }));
-    // Sets gameFormat to first available
   }, []);
 
   return (

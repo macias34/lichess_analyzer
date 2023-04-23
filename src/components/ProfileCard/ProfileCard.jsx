@@ -8,7 +8,7 @@ const ProfileCard = ({ data }) => {
 
   return (
     <div
-      className={`w-fit gap-5 flex flex-col  items-center justify-around ${slate.container}`}
+      className={`w-fit gap-5 flex flex-col items-center justify-around ${slate.container}`}
     >
       <UserDetails
         profile={profile}

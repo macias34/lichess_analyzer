@@ -29,7 +29,7 @@ const ProfileStats = ({ username }) => {
 
   return (
     <div
-      className={`flex items-center justify-around w-2/3 ${slate.container} px-5`}
+      className={`flex items-center gap-10  sm:flex-row flex-col justify-around w-2/3 ${slate.container} px-5`}
     >
       {!ratingHistoryIsFetching ? (
         <>
