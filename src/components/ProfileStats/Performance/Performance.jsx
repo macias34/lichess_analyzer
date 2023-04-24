@@ -13,12 +13,9 @@ const Performance = ({ data }) => {
 
   if (games)
     return (
-      <div className={` ${slate.card}`}>
-        <span className="font-semibold sm:text-xl text-base">Games</span>
-        <span className="sm:text-3xl text-xl  text-emerald-400 font-bold">
-          {winrate}% WR
-        </span>
-        <p>
+      <div title={`${winrate}% WR`} className="flex items-center gap-3">
+        <span className="font-semibold text-base">Games</span>
+        <p className="text-3xl font-bold max-lg:text-xl">
           <span className="text-emerald-400 ">
             {parseInt(wins).toLocaleString()}
           </span>{" "}

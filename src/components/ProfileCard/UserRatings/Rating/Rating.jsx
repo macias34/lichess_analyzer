@@ -16,9 +16,9 @@ const Rating = ({ perf }) => {
   return (
     <div
       onClick={switchGameFormat}
-      className={`flex px-5 py-3 transition rounded-2xl cursor-pointer hover:${slate.perf}`}
+      className={`flex px-5 py-3 max-lg:px-0 items-center max-lg:py-2 transition rounded-2xl cursor-pointer hover:${slate.perf}`}
     >
-      <span className="text-5xl mr-3">{perf.icon}</span>
+      <span className="text-5xl max-lg:text-4xl mr-3">{perf.icon}</span>
 
       <div className="flex flex-col">
         <span className="uppercase font-thin">{gameFormat}</span>

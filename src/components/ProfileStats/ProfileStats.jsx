@@ -28,21 +28,23 @@ const ProfileStats = ({ username }) => {
   });
 
   return (
-    <div
-      className={`flex items-center gap-10  sm:flex-row flex-col justify-around w-2/3 ${slate.container} px-5`}
-    >
-      {!ratingHistoryIsFetching ? (
-        <>
-          <Chart data={ratingHistory} />
-          <div className="flex flex-col gap-5">
-            <PeakRating data={ratingHistory} />
-            {!performanceError ? <Performance data={performanceData} /> : ""}
-          </div>
-        </>
-      ) : (
-        ""
-      )}
-    </div>
+    <>
+      <div
+        className={`flex items-center gap-5 flex-col justify-around w-2/3 ${slate.container} px-5`}
+      >
+        {!ratingHistoryIsFetching ? (
+          <>
+            <div className="flex gap-10">
+              <PeakRating data={ratingHistory} />
+              {!performanceError ? <Performance data={performanceData} /> : ""}
+            </div>
+            <Chart data={ratingHistory} />
+          </>
+        ) : (
+          ""
+        )}
+      </div>
+    </>
   );
 };
 

@@ -14,14 +14,20 @@ const UserDetails = ({ profile, title, username }) => {
   const renderName = () => {
     if (firstName && lastName) {
       return (
-        <span className="font-semibold text-xl">
+        <span className="font-semibold text-xl max-lg:text-lg">
           {firstName} {lastName}
         </span>
       );
     } else if (firstName) {
-      return <span className="font-semibold text-xl">{firstName}</span>;
+      return (
+        <span className="font-semibold text-xl max-lg:text-lg">
+          {firstName}
+        </span>
+      );
     } else if (lastName) {
-      return <span className="font-semibold text-xl">{lastName}</span>;
+      return (
+        <span className="font-semibold text-xl max-lg:text-lg">{lastName}</span>
+      );
     }
   };
 
@@ -46,13 +52,13 @@ const UserDetails = ({ profile, title, username }) => {
     <div className="flex flex-col gap-2 items-center">
       <div>
         {title ? (
-          <span className="text-3xl font-semibold text-yellow-500 mr-3">
+          <span className="text-3xl max-lg:text-xl font-semibold text-yellow-500 mr-3">
             {title}
           </span>
         ) : (
           ""
         )}
-        <span className="font-bold text-3xl">
+        <span className="font-bold text-3xl max-lg:text-xl">
           <a href={profileUrl}>{username}</a>
         </span>
       </div>

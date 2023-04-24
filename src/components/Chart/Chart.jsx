@@ -28,7 +28,7 @@ const Chart = ({ data }) => {
   };
 
   return (
-    <div className="sm:w-2/3 w-full">
+    <div className="w-full">
       <Line
         data={chartData}
         options={{
