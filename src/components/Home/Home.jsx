@@ -1,5 +1,5 @@
-import NoPortrait from "../../../js/src/components/UI/no-portrait";
 import Search from "../Search/Search";
+import NoPortrait from "../no-portrait";
 
 const Home = () => {
   return (

@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { changeUser } from "../../features/user";
 import { useGetCardDataQuery } from "../../features/apiSlice";
 import Search from "../Search/Search";
-import NoPortrait from "../../../js/src/components/UI/no-portrait";
+import NoPortrait from "../no-portrait";
 
 const Profile = () => {
   const dispatch = useDispatch();
